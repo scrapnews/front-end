@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ScrapHeaderComponent } from './scrap-header/scrap-header.component';
 import { ScrapFooterComponent } from './scrap-footer/scrap-footer.component';
 import { routing } from './app.routing';
+import { ScrapLoginComponent } from './scrap-login/scrap-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScrapHeaderComponent,
-    ScrapFooterComponent
+    ScrapFooterComponent,
+    ScrapLoginComponent
   ],
   imports: [
     BrowserModule,
