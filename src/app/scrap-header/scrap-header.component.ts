@@ -17,4 +17,8 @@ export class ScrapHeaderComponent implements OnInit {
     this.route.navigate(['/login']);
   }
 
+  navigateSupport(){
+    this.route.navigate(['/support']);
+  }
+
 }

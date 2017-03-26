@@ -9,15 +9,21 @@ import { ScrapHeaderComponent } from './scrap-header/scrap-header.component';
 import { ScrapFooterComponent } from './scrap-footer/scrap-footer.component';
 import { routing } from './app.routing';
 import { ScrapLoginComponent } from './scrap-login/scrap-login.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {AuthService} from "./services/auth.service";
+import { SupportComponent } from './support/support.component';
+import {AuthGuard} from "./guard/AuthGuard";
 
 @NgModule({
   declarations: [
     AppComponent,
     ScrapHeaderComponent,
     ScrapFooterComponent,
-    ScrapLoginComponent
+    ScrapLoginComponent,
+    SupportComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
@@ -35,7 +41,7 @@ import { ScrapLoginComponent } from './scrap-login/scrap-login.component';
       }
     ),
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
