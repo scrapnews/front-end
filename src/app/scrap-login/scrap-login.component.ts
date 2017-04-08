@@ -17,9 +17,6 @@ export class ScrapLoginComponent implements OnInit {
   login(from: string) {
     this.authService.login(from);
   }
-  logout() {
-    this.authService.logout();
-  }
 
 
 }

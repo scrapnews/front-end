@@ -19,7 +19,13 @@
         <li><a href="#">test4</a></li>
       </ul>
 
-      <button (click)="onConnected()" class="btn btn-primary navbar-right onConnect">Sign in</button>
+      <div *ngIf="!isAuth()">
+        <button (click)="onConnected()" class="btn btn-primary navbar-right onConnect">Sign in</button>
+      </div>
+
+      <div *ngIf="isAuth()">
+        <button (click)="logout()" class="btn btn-primary navbar-right onConnect">Sign Out</button>
+      </div>
 
     </div>
 
